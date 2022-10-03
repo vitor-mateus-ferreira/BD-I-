@@ -1163,6 +1163,13 @@ AND venda.id = 3;
 
 
 7. Liste os nomes dos fornecedores dos estados PARANÁ, MATO GROSSO e RIO GRANDE DO NORTE.
+TABELA FORNECEDOR NÃO EXISTE, SE EXISTISSE A CONSULTA SERIA A ABAIXO:
+SELECT fornecedor.nome
+FROM estado, cidade, fornecedor
+WHERE estado.id = cidade.estado_id
+AND cidade.id = fornecedor.cidade_id
+AND (estado.nome = 'PARANÁ' OR  estado.nome = 'MATO GROSSO' OR estado.nome = 'RIO GRANDE DO NORTE')
+
 8. Liste os nomes dos produtos vendidos no dia XXX (pode escolher um dia existente).
 9. Feliz com um bom atendimento, um determinado cliente entra em contato com o gerente para enviar uma lembrança ao funcionário.
 O problema é que, além de não informar a sua identidade, ele não lembra do nome do funcionário. Sabe apenas que,na conversa, moraram 
